@@ -20,9 +20,16 @@ def breadth_first_graph_search(problem):
         return node
     frontier = deque([node])
     explored = set()
+
+    #when there are unexplored nodes left at this level
     while frontier:
-       #YOUR CODE GOES HERE
-    return None
+        # loop through all the nodes and mark it once the node has been visited
+        # check if the node is the goal (goal test)
+        # if a goal was found, then return the path
+
+    # if none of the goal is found at this level
+    # then start this function again sequentially in each children node
+    return breadth_first_graph_search()
 
 
 def depth_first_graph_search(problem):

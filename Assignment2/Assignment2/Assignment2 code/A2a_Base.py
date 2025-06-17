@@ -27,7 +27,7 @@ class GraphProblem():
         return cost_so_far + (self.graph.get(A, B) or np.inf)
 
     def find_min_edge(self):
-        """Find minimum value of edges."""   # not used in this assingment.
+        """Find minimum value of edges."""   # not used in this assignment.
         m = np.inf
         for d in self.graph.graph_dict.values():
             local_min = min(d.values())
@@ -171,7 +171,7 @@ def UndirectedGraph(graph_dict=None):
 
 
 #exmaple graph from class and textbook.
-#the key value pairs here are  city:conected cities  . Or in the state space terminology, state:actions
+#the key value pairs here are  city:connected cities  . Or in the state space terminology, state:actions
 romania_map = UndirectedGraph(dict(
     Arad=dict(Zerind=75, Sibiu=140, Timisoara=118),
     Bucharest=dict(Urziceni=85, Pitesti=101, Giurgiu=90, Fagaras=211),
