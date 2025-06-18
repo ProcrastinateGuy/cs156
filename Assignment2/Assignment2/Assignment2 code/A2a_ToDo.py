@@ -6,7 +6,8 @@ from A2a_Base import *
 
 
 #______EDITING BELOW THIS LINE IS ALLOWED, ONLY EDIT THE INTERNAL IMPLEMENTATION OF THE FUNCTIONS ____________#
-def breadth_first_graph_search(problem):
+# returns a node
+def breadth_first_graph_search(problem) -> Node:
     """
     Implement the breadth first search for the graph here.
     some skeleton code is provided, feel free to edit it.
@@ -15,21 +16,26 @@ def breadth_first_graph_search(problem):
     Does not get trapped by loops.
     If two paths reach a state, only use the first one.
     """
-    node = Node(problem.initial)
+
+    # base case
+    node = Node(problem.initial) # the initial state
+
+    #goal test for root
     if problem.goal_test(node.state):
         return node
+
+    # if the current node is not the goal state
+    # create a dequeue to start the BFS
     frontier = deque([node])
-    explored = set()
+    explored = set() # a set to store the explored nodes
 
-    #when there are unexplored nodes left at this level
-    while frontier:
-        # loop through all the nodes and mark it once the node has been visited
-        # check if the node is the goal (goal test)
-        # if a goal was found, then return the path
+    # in this assignment we treat right as head, left as tail, reading start from right
+    #  tail <- [] [] [] [] [] [] <- head (start)
 
-    # if none of the goal is found at this level
-    # then start this function again sequentially in each children node
-    return breadth_first_graph_search()
+    def next_level(current, frontier, explored, problem):
+    
+    #goal test
+
 
 
 def depth_first_graph_search(problem):
