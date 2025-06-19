@@ -67,7 +67,6 @@ def depth_first_graph_search(problem):
             # get the child list
             child = [ ele for ele in top_element.expand(problem) if ele not in frontier and ele not in explored ]
 
-            # child = top_element.child_node(problem, top_element.action)
             if child is None or not child : # that means we have hit a leaf
                 explored.append(top_element) # add the top into explored
                 frontier.pop() # pop the top element
